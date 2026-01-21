@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Calculadora</string>
+    <string name="suma">+</string>
+    <string name="multiplicacion">*</string>
+    <string name="division">/</string>
+    <string name="resta">-</string>
+    <string name="opcion_2">Opcion 2:</string>
+    <string name="opci_n_1">Opción 1:</string>
+    <string name="resultado">Resultado:</string>
+</resources>
