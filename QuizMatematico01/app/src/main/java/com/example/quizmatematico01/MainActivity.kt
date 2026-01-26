@@ -64,7 +64,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun obtenerNum(v: View){
-        aleatorio = Random.nextInt(1900, 2501)
+        aleatorio = Random.nextInt(1000, 2001)
         numAleatorio.text = aleatorio.toString()
     }
 
