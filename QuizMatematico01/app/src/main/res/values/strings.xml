@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">QuizMatematico01</string>
+    <string name="num_aleatorio">NUMº ALEATORIO</string>
+    <string name="este_a_o_es_bisiesto">¿Este año es bisiesto?</string>
+    <string name="si">Si</string>
+    <string name="no">No</string>
+    <string name="comprobar_resultado">COMPROBAR RESULTADO</string>
+</resources>

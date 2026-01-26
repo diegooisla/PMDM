@@ -34,7 +34,6 @@ class MainActivity : AppCompatActivity() {
 
     fun clickSuma(v: View) {
         resultado.text = (num1.text.toString().toInt() + num2.text.toString().toInt()).toString()
-    }
 
     fun clickResta(v: View) {
         resultado.text = (num1.text.toString().toInt() - num2.text.toString().toInt()).toString()
