@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">JugandoDados</string>
+    <string name="saldo">Saldo</string>
+    <string name="_100">100</string>
+    <string name="mayor_menor_que_7">Mayor/Menor que 7</string>
+    <string name="par_impar">Par/Impar</string>
+</resources>

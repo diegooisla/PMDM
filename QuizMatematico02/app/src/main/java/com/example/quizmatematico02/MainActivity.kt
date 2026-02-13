@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
 
     lateinit var okView : ImageView
     lateinit var koView: ImageView
-    var aleatorio by Delegates.notNull<Int>()
+    lateinit var aleatorio : Int? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
