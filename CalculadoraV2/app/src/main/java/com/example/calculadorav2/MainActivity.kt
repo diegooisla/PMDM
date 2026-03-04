@@ -8,9 +8,13 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.repeatOnLifecycle
 import com.example.calculadorav2.databinding.ActivityMainBinding
 import com.example.calculadorav2.viewModel.ViewModel
 import com.google.android.material.snackbar.Snackbar
+import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
 
@@ -28,7 +32,7 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        myViewModel.datos.observe(this){
+       /* myViewModel.datos.observe(this){
 
             if(it.mensaje != ""){
                 Snackbar.make(binding.main, it.mensaje, Snackbar.LENGTH_SHORT).show()
@@ -38,10 +42,24 @@ class MainActivity : AppCompatActivity() {
             }
 
 
-           /* binding.txtResultado.text = it.acumulado
+           *//* binding.txtResultado.text = it.acumulado
             if(it.calcularResultado)
-                binding.txtResultado.visibility = View.VISIBLE*/
+                binding.txtResultado.visibility = View.VISIBLE*//*
 
+        }*/
+
+        lifecycleScope.launch{
+            repeatOnLifecycle(Lifecycle.State.STARTED){
+                myViewModel.datos.collect {
+                    if(it.mensaje != ""){
+                        Snackbar.make(binding.main, it.mensaje, Snackbar.LENGTH_SHORT).show()
+                    }else{
+                        binding.txtHistorial.text = it.acumulado
+                        binding.txtResultado.text = it.input
+                    }
+
+                }
+            }
         }
     }
 

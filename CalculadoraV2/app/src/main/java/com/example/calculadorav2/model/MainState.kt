@@ -9,11 +9,11 @@ class MainState {
     fun acumularNum(num : String) : Datos{
         if(misDatos.calcularResultado){
             limpiar(num)
-            return misDatos
+            return Datos(misDatos.acumulado, misDatos.mensaje, misDatos.input)
 
         }else if(num == "Clear"){
             limpiar("0")
-            return misDatos
+            return Datos(misDatos.acumulado, misDatos.mensaje, misDatos.input)
 
         }else{
             if(misDatos.input == "0") misDatos.input = num
@@ -21,7 +21,7 @@ class MainState {
 
             ultSimbo = false
             misDatos.mensaje = ""
-            return misDatos
+            return Datos(misDatos.acumulado, misDatos.mensaje, misDatos.input)
         }
 
 
@@ -63,7 +63,7 @@ class MainState {
         }
 
 
-        return misDatos
+        return Datos(misDatos.acumulado, misDatos.mensaje, misDatos.input)
     }
 
 
