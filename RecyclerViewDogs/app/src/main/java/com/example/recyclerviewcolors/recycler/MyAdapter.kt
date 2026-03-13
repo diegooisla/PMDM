@@ -1,12 +1,10 @@
 package com.example.recyclerviewcolors.recycler
 
-import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.recyclerviewcolors.R
 import com.example.recyclerviewcolors.model.DogsResponse
-import androidx.core.graphics.toColorInt
 import com.bumptech.glide.Glide
 
 class MyAdapter(var myData : DogsResponse) : RecyclerView.Adapter<MyView>() {
